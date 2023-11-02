@@ -5,7 +5,7 @@ Since the Omitec 3G VCI hardware that the TechCentre Diagnostic Software was des
 
 I have tested fault reading/clearing, live data, and actuator tests. I have not tested key programming. **USE AT YOUR OWN RISK**
 
-I have tested this patch to work on a cheap GODIAG J2534 adapter like the one shown below. It works, but disconnects often. A higher quality J2534 adapter like one from Drew Tech or a Mongoose might work better.
+I have tested this patch to work on a cheap $20 GODIAG J2534 adapter like the one shown below. It works, but disconnects often. A higher quality J2534 adapter like one from Drew Tech or a Mongoose might work better.
 
 <img src="https://github.com/hrmnc/J2534DllLoader/assets/2160109/e15bdf3f-19b0-47cb-8241-70ef26f74222)" alt="drawing" width="500"/>
 
