@@ -9,12 +9,12 @@ I have tested this patch to work on a cheap $20 GODIAG J2534 adapter, shown belo
 
 <img src="https://github.com/hrmnc/J2534DllLoader/assets/2160109/e15bdf3f-19b0-47cb-8241-70ef26f74222)" alt="drawing" width="500"/>
 --->
-## Tested adapters
-
-| Name | Notes |
-| ----------- | ----------- |
-| GODIAG GD101 J2534 | Connection drops frequently, not recommended for programming/flashing |
-| Peak PCAN-USB with PCAN-PassThru API | Works for CAN functions  |
+## Tested J2534 Adapters
+Here are the J2534 devices that have been tested and the vehicles modules that they can talk to:
+| Name | ABS | BMS | CDCM | EPHS | GEM | PCU | RAC | SRS | VCU | Notes |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| GODIAG GD101 J2534 | :heavy_check_mark: | :heavy_check_mark: |  |  | :heavy_check_mark: | :heavy_check_mark: | n/a | :heavy_check_mark: | :heavy_check_mark: | |
+| Peak PCAN-USB with PCAN-PassThru API |  | :heavy_check_mark: |  |  |  | :heavy_check_mark: | n/a | :heavy_check_mark: | :heavy_check_mark: |  |
 
 ## Installation
 Simply replace the J2534DllLoader.dll file in C:\Program Files\Omitec Ltd\THINK TechCentre and edit the THINKDiagnostics.exe.config file (in the same directory) as follows:
