@@ -5,6 +5,9 @@ Modified J2534 DLL Loader for the Think City TechCentre Diagnostic Software
 
 Since the Omitec 3G VCI hardware that the TechCentre Diagnostic Software was designed for is near impossible to find, I have patched the J2534 DLL Loader to work with any J2534 hardware.
 
+**Only TechCentre versions below v2.2.0 require patching.**
+[TechCentre v2.2.5 works natively with any J2534 adapter.](https://hrmnc.github.io/2023/11/16/Installing-Think-Diagnostics.html)
+
 I have tested fault reading/clearing, live data, and actuator tests. I have not tested key programming or flashing. **USE AT YOUR OWN RISK**
 <!---
 I have tested this patch to work on a cheap $20 GODIAG J2534 adapter, shown below, which can be found on eBay or Amazon. It works, but disconnects often. A higher quality J2534 adapter like one from Drew Tech or a Mongoose might work better.
@@ -15,12 +18,12 @@ I have tested this patch to work on a cheap $20 GODIAG J2534 adapter, shown belo
 Here are the J2534 devices that have been tested and the vehicles modules that they can talk to:
 | Name | ABS | BMS | CDCM | EPHS | GEM | PATS | PCU | RAC | SRS | VCU |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| GODIAG GD101 J2534 | :heavy_check_mark: | :heavy_check_mark: | :grey_question: | :grey_question: | :heavy_check_mark: | n/a | :heavy_check_mark: | n/a | :heavy_check_mark: | :heavy_check_mark: |
-| Peak PCAN-USB with PCAN-PassThru API |  | :heavy_check_mark: | :grey_question: | :grey_question: |  | n/a | :heavy_check_mark: | n/a | :heavy_check_mark: | :heavy_check_mark: |
+| GODIAG GD101 J2534 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :grey_question: | :heavy_check_mark: | n/a | :heavy_check_mark: | n/a | :heavy_check_mark: | :heavy_check_mark: |
+| Peak PCAN-USB with PCAN-PassThru API |  | :heavy_check_mark: | :heavy_check_mark: | :grey_question: |  | n/a | :heavy_check_mark: | n/a | :heavy_check_mark: | :heavy_check_mark: |
 
 Notes:
 - PATS and RAC modules were not installed in North America vehicles, so I am unable to test it.
-- CDCM and EPHS communicate over CAN bus, so they should work with either adapter. I suspect that there is an issue with my vehicle that is preventing me from talking to them.
+- EPHS function in TechCentre was purportedly never completed, so it may or may not work on your vehicle. It doesn't work for me.
 
 <!--- ![image](https://github.com/hrmnc/J2534DllLoader/assets/2160109/e4a0856d-4f76-4d10-80b3-4c99682d1505) --->
 
